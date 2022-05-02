@@ -15,9 +15,7 @@ def create_folders_if_necessary(path):
 
 
 def get_storage_dir():
-    if "RL_STORAGE" in os.environ:
-        return os.environ["RL_STORAGE"]
-    return "storage"
+    return os.environ["RL_STORAGE"] if "RL_STORAGE" in os.environ else "storage"
 
 
 def get_model_dir(model_name):

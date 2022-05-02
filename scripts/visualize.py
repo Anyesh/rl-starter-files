@@ -62,7 +62,7 @@ if args.gif:
 # Create a window to view the environment
 env.render('human')
 
-for episode in range(args.episodes):
+for _ in range(args.episodes):
     obs = env.reset()
 
     while True:
@@ -82,5 +82,5 @@ for episode in range(args.episodes):
 
 if args.gif:
     print("Saving gif... ", end="")
-    write_gif(numpy.array(frames), args.gif+".gif", fps=1/args.pause)
+    write_gif(numpy.array(frames), f"{args.gif}.gif", fps=1/args.pause)
     print("Done.")

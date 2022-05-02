@@ -110,4 +110,6 @@ if n > 0:
 
     indexes = sorted(range(len(logs["return_per_episode"])), key=lambda k: logs["return_per_episode"][k])
     for i in indexes[:n]:
-        print("- episode {}: R={}, F={}".format(i, logs["return_per_episode"][i], logs["num_frames_per_episode"][i]))
+        print(
+            f'- episode {i}: R={logs["return_per_episode"][i]}, F={logs["num_frames_per_episode"][i]}'
+        )
